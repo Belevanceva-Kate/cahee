@@ -148,13 +148,10 @@ body {
 		text-align: center;
 		padding: 0 2%;
 		position: relative;
-		&--abt {
-			max-width: 100%;
-			filter: drop-shadow(-20px 20px 30px rgba(0, 0, 0, .3)); 
-		}
-		&--serv {
-			
-		}
+	}
+	&__image-bg {
+		max-width: 100%;
+		filter: drop-shadow(-20px 20px 30px rgba(0, 0, 0, .3)); 
 	}
 	&__content {
 		display: inline-block;
@@ -183,7 +180,9 @@ body {
 		font-size: 17px;
 		font-weight: 300;
 		line-height: 1.6;
-		margin: 0 0 15px 0;
+		p {
+			margin: 0 0 15px;
+		}
 		&--center {
 			text-align: center;
 			margin: 0;
@@ -191,6 +190,7 @@ body {
 		}
 		&--left {
 			padding-right: 50%;
+			margin-bottom: 30px;
 		}
 		&--light {
 			color: #fff;
@@ -265,12 +265,6 @@ body {
 	}
 	&__grid {
 		font-size: 0;
-	}
-	&__row {
-		height: 550px;
-		&--blog {
-			height: 310px;
-		}
 	}
 	&__width-2-3 {
 		width: 66%;
@@ -533,20 +527,23 @@ body {
 		margin: 15px 0 0 0;
 		padding: 20px 15px;
 		background-color: rgba(0, 196, 196, .5);
-		font: 300 15px/1 'Raleway', Arial, sans-serif;
+		font: 700 15px/1 'Raleway', Arial, sans-serif;
 		outline: none;
-		border: 1px solid transparent;
+		/* border: 1px solid transparent; */
+		border: none;
 		@include transition(all, .25s, ease);
 		&::placeholder {
 			@include transition(all, .25s, ease);
 			opacity: 1;
 			color: #fff;
+			font-weight: 300;
 		}
 		&:focus::placeholder {
 			opacity: 0;
 		}
 		&:focus {
-			border: 1px solid #355b82;
+			border-left: 5px solid #355b82;
+			background-color: rgba(0, 196, 196, 1);
 		}
 	}
 	&__label,
